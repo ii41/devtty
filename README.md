@@ -31,7 +31,7 @@ hello world
 ```
 $ # 各位想必记得正常打开vim之后你按Ctrl-C它会嘲讽你。以这个方式打开的vim也是不吃Ctrl-C的。
 $ # :q<Enter>还是有用的，但是为了安全，建议另开一个终端准备kill。
-$ vim -uNONE > a.txt
+$ vim -u NONE > a.txt
 Vim: Warning: Output is not to a terminal
 ```
 
@@ -39,7 +39,6 @@ Vim: Warning: Output is not to a terminal
 
 咦，终端闪烁了一下，然后重置了？好像一瞬间看见了`vim`的初始界面？
 
-跟据你的系统，你所见的现象会有所不同。但是你一定会发现，`cat`这个仅仅只会把文件内容输出给自己的标准输出的软件，一瞬间似乎也使用了`vim`操纵
-终端的魔法。
+跟据你的系统，你所见的现象会有所不同。但是你一定会发现，`cat`这个仅仅只会把文件内容输出给自己的标准输出的软件，一瞬间似乎也使用了`vim`操纵终端的魔法。
 
 也就是说，魔法是可以存储在文件里的。
