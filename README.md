@@ -1,13 +1,13 @@
 # `/dev/tty`：终端竟可只是终端
 ```
-    $ cat > a.c && gcc a.c
-    #include <stdio.h>
-    int main() { fputs("hello world\n", stdout); return 0; }
-    $ ./a.out
-    hello world
-    $ ./a.out > a.txt
-    $ cat a.txt
-    hello world
+$ cat > a.c && gcc a.c
+#include <stdio.h>
+int main() { fputs("hello world\n", stdout); return 0; }
+$ ./a.out
+hello world
+$ ./a.out > a.txt
+$ cat a.txt
+hello world
 ```
 
 刚刚接触C语言和命令行的时候，我们的课件上多少都会有跟上面这几行命令类似的内容，告诉你什么是标准输出，什么是重定向。
@@ -29,10 +29,10 @@
 如果终端和输入输出真的就是一回事，重定向这种会向终端施魔法的软件的标准输出会怎样呢？我们用`vim`试一试。
 
 ```
-    $ # 各位想必记得正常打开vim之后你按Ctrl-C它会嘲讽你。以这个方式打开的vim也是不吃Ctrl-C的。:q<Enter>还是有用的，但是为了安全，建议
-    $ # 另开一个终端准备kill。
-    $ vim -uNONE > a.txt
-    Vim: Warning: Output is not to a terminal
+$ # 各位想必记得正常打开vim之后你按Ctrl-C它会嘲讽你。以这个方式打开的vim也是不吃Ctrl-C的。
+$ # :q<Enter>还是有用的，但是为了安全，建议另开一个终端准备kill。
+$ vim -uNONE > a.txt
+Vim: Warning: Output is not to a terminal
 ```
 
 `kill`掉`vim`之前，我们可以先`cat a.txt`一下。
